@@ -1,0 +1,356 @@
+/* 
+Theme Name: Ahmed da Dhaba
+Theme URI: http://example.com/my-custom-theme
+Author: Hussnain Ahmed
+Author URI: http://example.com
+Description: A custom WordPress theme for the resturent and hotles
+Version: 1.0
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+Text Domain: my-custom-theme
+*/
+
+:root {
+    /* Original Colors */
+    --primary-color: #D2691E; /* Buttons and Links | headings and highlighted text*/
+    --secondary-color: #4CAF50; /* headings and highlighted text*/
+    --background-color: #FFFFFF; /* Background */
+    --accent-color: #8B4513; /* Buttons and Links | hover effects */
+    --flame-color: #FF4500; /* Icons or Illustrations*/
+
+     /* Lighter Versions */
+  --primary-color-light: #FF7F32; /* Lighter warm orange */
+  --secondary-color-light: #81C784; /* Lighter green */
+  --accent-color-light: #A87F5A; /* Lighter brown */
+  --flame-color-light: #FF7F51; /* Lighter bright orange */
+
+
+    --color-dark: #333333; /* Dark gray for text */
+
+    }
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background-color);
+}
+/* header */
+.header-container{
+    background-color: var(--flame-color-light);
+    color: var(--text-color-light);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 2px rgba(0,0,0,0.2);
+    position:fixed;
+    top: 0;
+    margin-bottom: 2rem;
+}
+
+.logo-container{
+    width: 4rem;
+    z-index: 101;
+}
+.logo-container img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: .5rem 1.5rem;
+    box-shadow: 0 3px 2px rgba(0,0,0,0.2);
+   
+}
+/* menu */
+.menu-container {
+    margin-left: 1rem;
+}
+.menu-container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+.menu-container ul li a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.menu-container ul li a:hover {
+    color: var(--text-color-light);
+}
+
+/* header btn */
+.btn-area{
+    display: block;
+    margin: .5rem 1.5rem;
+    width: 7rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--background-color);
+    background-color: var(--primary-color-light);
+    border: none;
+    border-radius: 2rem;
+    box-shadow:0 3px 5px red;
+    transition: all 0.1  ease-in-out;
+}
+.btn-area:hover{
+    color: var(--color-dark);
+    background-color: var(--background-color);
+}
+/* menu icon shown on mobile */
+.shot-menu{
+    display: none;
+    width: 3rem;
+    margin: .5rem 1.5rem;
+}
+.shot-menu img{
+    width: 70%;
+}
+/* main container */
+.post-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    margin-top: 6rem;
+}
+/* main content */
+.posts {
+    flex:75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    justify-content: space-evenly;
+    gap:2rem;
+    margin: 1rem .3rem;
+}
+.content{
+    border: none;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.4);
+}
+.content img{
+    max-height: 25rem;
+    object-fit: cover;
+}
+.content h2{
+    margin: .5rem;
+    font-size: 1rem;
+}
+.content ul{
+    margin: .5rem;
+}
+.content li{
+    font-size: .8rem;
+    color: var(--color-dark);
+}
+/* about page */
+.about-page{
+    flex: 75%;
+    max-width: 60%;
+    margin: 0 2rem;
+    gap:.5rem;
+}
+.has-text-align-center{
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--flame-color);
+}
+.about-page p{
+    font-size: 1.5rem;
+}
+.about-page h4{
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--flame-color);
+
+}
+.about-page li{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+/* sidebar */
+.sidebar{
+    flex: 23%;
+    overflow: hidden;
+}
+.sidebar-content{
+    margin: 2rem;
+    padding: 2rem 0;
+    margin-bottom:0 ;
+    padding-bottom: 0 ;
+
+}
+
+/* sidebar  categories*/
+.sidebar{
+    padding-top: 3rem;
+}
+.sidebar h2{
+    text-align: center;
+    margin: .5rem;
+    color: var(--flame-color);
+}
+.sidebar li{
+    list-style: none;
+}
+.sidebar a{
+    line-height: 3rem;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all .1s ease-in-out;
+}
+.sidebar a:hover{
+    color: var(--flame-color);
+
+}
+/* search */
+.wp-block-search__input{
+border: 1.5px solid var(--flame-color);
+border-radius: 2rem ;
+box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+padding: .56rem;
+color: #FF4500;
+font-weight: 700;
+margin-bottom: .5rem;
+}
+/* Pagination */
+.paginate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem .5rem ;
+    margin: 1rem auto; /* Center align the pagination */
+    gap: 2rem;
+}
+.paginate>.current{
+    background-color: var(--flame-color);
+    color: #FFFFFF;
+    border-radius: 1rem;
+}
+.page-numbers{
+    text-decoration: none;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: large;
+    padding: .3rem;
+    transition: all 0.01s ease-in-out;
+}
+.page-numbers:hover{
+    border: .5px solid var(--flame-color);
+    border-radius: 1rem;
+    color: #FF4500;
+}
+.prev,.next{
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: all 0.01s ease-in-out;
+    padding: .3rem;
+    background:none;
+}
+.prev:hover,.next:hover{
+    border: .5px solid var(--flame-color);
+    border-radius: 1rem;
+    color: #FF4500;
+}
+/* footer */
+.footer-container {
+    background-color: var(--flame-color-light);
+    color: var(--text-color-light);
+    width: 100%;
+    height: 5rem;
+    color: var(--background-color);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    font-size: 1.3rem;
+    box-shadow: 1px -3px 5px rgba(0,0,0,0.2);
+    margin-top: auto;
+}
+
+/* Show the menu when the class 'show' is added */
+.menu-container.show ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Mobile Hamburger Menu (shot-menu) */
+.shot-menu {
+    display: none; /* Hidden by default */
+    width: 3rem;
+    margin: .5rem 1.5rem;
+    cursor: pointer; /* Make the image clickable */
+}
+
+.shot-menu img {
+    width: 70%;
+}
+
+.shot-menu img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* media query */
+@media screen and (max-width: 650px) {
+    .shot-menu{
+        display: block;
+        z-index: 101;
+    }
+    .btn-area{
+        display: none;
+    }
+    .footer-container{
+        font-size: 1rem;
+    }
+
+    .menu-container ul {
+        display: none; /* Hide menu items by default on mobile*/
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: var(--flame-color-light);
+        padding-top: 5rem;
+        position: fixed;
+        top: 0;
+        left:0; 
+        transform: translateX(-100%);
+        transition: all 0.1s ease-in-out;
+        
+    }
+
+    .menu-container ul li {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .menu-container ul li a {
+        color: #fff;
+    }
+
+    .menu-container.show ul{
+        display:block; /* Show menu when 'show' class is added */
+        z-index: 100;
+            /* When the menu is active (add an active class dynamically via JavaScript) */
+        transform: translateX(0); /* Slide into view */
+    }
+
+
+} 
